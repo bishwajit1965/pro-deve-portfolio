@@ -1,0 +1,525 @@
+/* Global font Poppins
+======================*/
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global styles begin
+=============================*/
+* {
+  box-sizing: border-box;
+  border: none;
+  font-family: "Poppins", Aerial, sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+  text-decoration: none;
+}
+/* Color & shadow styles begin
+=============================*/
+:root {
+  --black: #444;
+  /* --bg-color:#e6e6e6; */
+  --bg-color: #edeff0;
+  --deep-green: #0ad2aa;
+  --background: #ddd;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --border-thick: 2px solid#F1F1F1;
+  --border-thick-black: 2px solid#333;
+  --button: #8d0f0f;
+  --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset,
+    -0.4rem -0.4rem 1rem #fff inset;
+  --darkorange: #ff8c00;
+  --green: #27ae60;
+  --lightgrey: #ddd;
+  --light-color: #777;
+  --orangered: #ff4500;
+  --primary: #00ff00;
+  --secondary: #075f07;
+  --whitecolor: #fff;
+}
+
+/* Entire html style begins
+=============================*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Body style begins
+=============================*/
+body {
+  background: var(--bg-color);
+  padding-left: 30rem;
+}
+
+body.active {
+  --black: #fff;
+  --light-color: #ddd;
+  --lightgrey: #222;
+  --darkorange: #fff;
+  --bg-color: #222;
+  --border-thick: var(--border-thick-black);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  --box-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #111 inset,
+    -0.4rem -0.4rem 1rem #333 inset;
+}
+
+/* Left sidebar navigation begins
+===================================*/
+.left-navigation {
+  background: var(--bg-color);
+  border-right: var(--border);
+  height: 100%;
+  left: 0;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 30rem;
+  z-index: 999;
+}
+
+.left-navigation .admin img {
+  border: 1rem solid transparent;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  height: 18rem;
+  margin: 0.5rem 0;
+  width: 18rem;
+}
+
+.left-navigation .admin h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+
+.left-navigation .admin p {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.left-navigation .navbar {
+  padding-top: 1rem;
+}
+
+.left-navigation .navbar a {
+  border-radius: 5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  display: block;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  padding: 0.7rem;
+}
+.left-navigation .navbar a:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+}
+
+/*  Sidebar toggler button style
+=================================== */
+#sidebar-toggler-btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 1000;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--black);
+  background: var(--bg-color);
+  display: none;
+}
+
+#sidebar-toggler-btn:hover {
+  color: var(--green);
+  box-shadow: var(--box-shadow-inset);
+}
+
+/* Theme toggler begins
+===================================*/
+#theme-toggler {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--black);
+  background: var(--bg-color);
+}
+
+#theme-toggler:hover {
+  color: var(--green);
+  box-shadow: var(--box-shadow-inset);
+}
+
+/* Button styles 
+===================================*/
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: none;
+  color: var(--black);
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+}
+
+/* Section style begins
+===================================*/
+section {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Home section style begins
+===================================*/
+.middle-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.middle-content .home-content h3 {
+  font-size: 7rem;
+  color: var(--black);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.middle-content .home-content p {
+  font-size: 2rem;
+  color: var(--green);
+  padding-bottom: 0.5rem;
+}
+
+.middle-content .social-sites {
+  position: relative;
+  top: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+}
+
+.middle-content .social-sites a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  box-shadow: var(--box-shadow);
+  margin: 0.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+}
+
+.middle-content .social-sites a:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--green);
+}
+
+/* Heading section style begins
+===================================*/
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.heading span {
+  color: var(--green);
+  text-transform: uppercase;
+}
+
+/* About section style begins
+===================================*/
+.about-me .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+}
+
+.about-me .row .box-wrapper {
+  flex: 1 1 40rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-me .row .box-wrapper .box-data {
+  flex: 1 1 18rem;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.about-me .row .box-wrapper .box-data h3 {
+  font-size: 5rem;
+  color: var(--black);
+  line-height: 1.1;
+}
+
+.about-me .row .box-wrapper .box-data p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  padding: 0.5rem 0;
+}
+
+.about-me .row .content {
+  flex: 1 1 40rem;
+}
+
+.about-me .row .content h3 {
+  font-size: 3.5rem;
+  color: var(--black);
+  line-height: 1.8;
+}
+
+.about-me .row .content h3 span {
+  color: var(--green);
+}
+
+.about-me .row .content p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+.about-me .row:nth-child(3) {
+  padding-top: 2rem;
+}
+
+.about-me .row .progress {
+  flex: 1 1 40rem;
+}
+
+.about-me .row .progress h3 {
+  color: var(--black);
+  font-weight: normal;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-me .row .progress .bar {
+  box-shadow: var(--box-shadow);
+  border-radius: 5rem;
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.about-me .row .progress .bar span {
+  display: block;
+  height: 100%;
+  background: var(--green);
+  border-radius: 5rem;
+}
+
+.about-me .row .progress .bar-1-1 span {
+  width: 90%;
+}
+
+.about-me .row .progress .bar-1-2 span {
+  width: 75%;
+}
+
+.about-me .row .progress .bar-1-3 span {
+  width: 80%;
+}
+
+.about-me .row .progress .bar-2-1 span {
+  width: 95%;
+}
+
+.about-me .row .progress .bar-2-2 span {
+  width: 89%;
+}
+
+.about-me .row .progress .bar-2-3 span {
+  width: 65%;
+}
+/* Portfolio section style begins
+===================================*/
+.my-portfolio .box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.my-portfolio .box-wrapper .data-box {
+  height: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  border: 1rem solid transparent;
+}
+
+.my-portfolio .box-wrapper .data-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.my-portfolio .box-wrapper .data-box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg-color);
+  display: grid;
+  place-items: center;
+  transform: scale(0);
+}
+
+.my-portfolio .box-wrapper .data-box:hover .content {
+  transform: scale(1);
+}
+
+.my-portfolio .box-wrapper .data-box .content h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-transform: uppercase;
+  transform: translateY(-15rem);
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.my-portfolio .box-wrapper .data-box:hover .content h3 {
+  transform: translateY(0rem);
+  opacity: 1;
+}
+
+/* Services section style begins
+===================================*/
+.my-services .box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.my-services .box-wrapper .data-box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.my-services .box-wrapper .data-box i {
+  font-size: 4rem;
+  padding-bottom: 5rem;
+  color: #fff;
+}
+
+.my-services .box-wrapper .data-box h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: var(--black);
+}
+
+.my-services .box-wrapper .data-box p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--light-color);
+}
+
+.my-services .box-wrapper .data-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--green);
+  z-index: -1;
+  clip-path: circle(9rem at 4% 0%);
+  transition: 0.3s linear;
+}
+
+.my-services .box-wrapper .data-box:hover::before {
+  clip-path: circle(100%);
+}
+
+.my-services .box-wrapper .data-box:hover > * {
+  color: #fff;
+}
+
+/* Contact section style begins
+===================================*/
+.contact-me form {
+  margin: 1rem auto;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.contact-me form .box {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.contact-me form textarea {
+  height: 20rem;
+  resize: none;
+}
+
+.contact-me form .box:focus {
+  box-shadow: var(--box-shadow-inset);
+}
+
+/* Footer area begins
+===================================*/
+.footer-area {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 1rem;
+  border-top: var(--border);
+  color: var(--black);
+}
+
+.footer-area span {
+  color: var(--green);
+}
